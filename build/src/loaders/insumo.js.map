@@ -1,0 +1,1 @@
+{"version":3,"file":"insumo.js","sourceRoot":"","sources":["../../../src/loaders/insumo.ts"],"names":[],"mappings":";;;;;AAAA,qDAA+B;AAC/B,oEAAiD;AAEjD,mBAAe,UAAE,EAAyB;QAAxB,mBAAmB,yBAAA;IACjC,OAAO,CAAC,GAAG,CAAC,iCAAiC,CAAC,CAAA;IAC9C,OAAO,IAAI,aAAM,CAAC;QAGd,EAAE,EAAE;YACA,UAAU,EAAE,gBAAM,CAAC,MAAM,CAAC,YAAY;YACtC,QAAQ,EAAC,mBAAmB;SAC/B;KAGJ,CAAC,CAAC;AACP,CAAC,EAAC"}

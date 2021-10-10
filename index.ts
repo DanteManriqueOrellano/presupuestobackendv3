@@ -226,11 +226,23 @@ const responseTime = require('response-time');
 const { promisify } = require('util');
 
 const app = express()
-
-const client = redis.createClient({
-    host: '127.0.0.1',
-    port: 8081
-})
+require('dotenv').config()
+const REDIS_HOST = "ec2-52-5-212-47.compute-1.amazonaws.com"; // replace with own IP
+const REDIS_PORT = 23120;
+const REDIS_PASSWORD = "p084e82949e443be46868bb05142b8b5443c90f2b55c954adbeec014ec7227672";
+const client = redis.createClient( {
+  
+  host: REDIS_HOST,
+  port: REDIS_PORT,
+  password: REDIS_PASSWORD,
+  retryStrategy: (times:any) => Math.max(times * 100, 3000),
+  tls: {
+    rejectUnauthorized: false,
+    requestCert: true,
+    
+    
+  },
+});
 
 const GET_ASYNC = promisify(client.get).bind(client);
 const SET_ASYNC = promisify(client.set).bind(client);
